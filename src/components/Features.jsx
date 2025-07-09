@@ -1,35 +1,116 @@
-import React from 'react'
-import { benefits } from '../constants'
-import Spline from '@splinetool/react-spline'
+import { useRef } from "react";
+import Card from "../components/Card";
+// import { Globe } from "../components/globe";
+// import CopyEmailButton from "../components/CopyEmailButton";
+import {Frameworks}  from "../components/FrameWorks";
 
 const Features = () => {
+  const grid2Container = useRef();
   return (
-    <section className='w-full flex flex-col gap-4 items-center relative h-screen overflow-hidden bg-transparent '>
-     <Spline className='absolute z-99 top-[20%] scale-[2.1]' scene="https://prod.spline.design/1XsHIQMmgXJ7q6V7/scene.splinecode" />
-
-    <h2 className='text-6xl mt-4 text-white font-[acma-black]'>Reasons to Join Us! </h2>
-    <div className='container pb-4  relative z-9999'>
-        <div className='flex justify-center flex-wrap w-full gap-6 mb-10'>
-            {benefits.map((item)=>(
-                <div
-                className='block relative p-0.5  w-[27%] bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem]'
-                style={{backgroundImage : `url(${item.backgroundUrl})`,
-            overflow : 'hidden'}}
-                key={item.id}>
-                    <div className='relative  glass h-full  z-2 flex flex-col  p-[2.4rem] pointer-events-none'>
-                        <h5 className=' font-[acma-black] text-white text-2xl'>
-                            {item.title}
-                        </h5>
-                        <p className='text-white text-xl font-[absans]'>
-                            {item.text}
-                        </p>
-                    </div>
-                </div>
-            ))}
+    <section className="c-space section-spacing text-xl" id="about">
+      <h2 className="text-heading font-[acma-black] ">Reasons to Join Us!</h2>
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[18rem] mt-12">
+        {/* Grid 1 */}
+        <div className="flex items-end grid-default-color grid-1">
+          <img
+            src="https://toppng.com/uploads/preview/code-text-programming-letters-symbols-11569818411fpnugmoo1n.jpg"
+            className="absolute scale-[1.75] -right-[5rem] -top-[1rem] md:scale-[3] md:left-50 md:inset-y-10 lg:scale-[1.2] lg:left-0 lg:top-0"
+          />
+          <div className="z-10">
+            <p className="headtext font-[acma-semi]">Real-World Projects</p>
+            <p className="subtext font-[absans]">
+              Work on innovative projects that solve actual problems and build your portfolio while learning.
+            </p>
+          </div>
+          <div className="absolute inset-x-0 pointer-evets-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />
         </div>
-    </div>
+        {/* Grid 2 */}
+        <div className="grid-default-color grid-2">
+          <div
+            ref={grid2Container}
+            className="flex items-center justify-center w-full h-full"
+          >
+            <p className="flex items-end text-5xl font-[absans] text-gray-500">
+              Focus Areas
+            </p>
+            <Card
+              style={{ rotate: "75deg", top: "30%", left: "20%" }}
+              text="Web Development"
+              containerRef={grid2Container}
+            />
+            <Card
+              style={{ rotate: "-30deg", top: "60%", left: "45%" }}
+              text="App Development"
+              containerRef={grid2Container}
+            />
+            <Card
+              style={{ rotate: "90deg", bottom: "30%", left: "70%" }}
+              text="Cyber Security"
+              containerRef={grid2Container}
+            />
+            <Card
+              style={{ rotate: "-45deg", top: "55%", left: "0%" }}
+              text="Video Editing"
+              containerRef={grid2Container}
+            />
+            {/* <Card
+              style={{ rotate: "20deg", top: "10%", left: "38%" }}
+              text="SRP"
+              containerRef={grid2Container}
+            />
+            <Card
+              style={{ rotate: "30deg", top: "70%", left: "70%" }}
+              image="assets/logos/csharp-pink.png"
+              containerRef={grid2Container}
+            />
+            <Card
+              style={{ rotate: "-45deg", top: "70%", left: "25%" }}
+              image="assets/logos/dotnet-pink.png"
+              containerRef={grid2Container}
+            />
+            <Card
+              style={{ rotate: "-45deg", top: "5%", left: "10%" }}
+              image="assets/logos/blazor-pink.png"
+              containerRef={grid2Container}
+            /> */}
+          </div>
+        </div>
+        {/* Grid 3 */}
+        <div className="grid-black-color grid-3">
+          <div className="z-10 w-[50%]">
+            <p className="headtext font-[acma-semi]">Community Spirit</p>
+            <p className="subtext font-[absans]">
+              Join a friendly community of developers where everyone helps each other grow and succeed.
+            </p>
+          </div>
+          <figure className="absolute left-[30%] top-[10%]">
+            {/* <Globe /> */}
+          </figure>
+        </div>
+        {/* Grid 4 */}
+        <div className="grid-special-color grid-4">
+          <div className="flex flex-col items-center justify-center gap-4 size-full">
+            <p className="text-center font-[absans] text-xl headtext">
+              Do you want to start a project together?
+            </p>
+            {/* <CopyEmailButton /> */}
+          </div>
+        </div>
+        {/* Grid 5 */}
+        <div className="grid-default-color grid-5">
+          <div className="z-10 w-[50%]">
+            <p className="headText font-[acma-semi]">Developer Network</p>
+            <p className="subtext font-[absans]">
+              Connect with like-minded developers, share knowledge, and build lasting professional relationships in the tech community.
+            </p>
+          </div>
+          <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125">
+            <Frameworks />
+          </div>
+        </div>
+      </div>
     </section>
-  )
-}
+  );
+};
 
-export default Features
+export default Features;
