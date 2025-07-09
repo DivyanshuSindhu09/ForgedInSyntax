@@ -63,7 +63,7 @@ export const myProjects = [
     subDescription: [
       'RESURRECTION is a cutting-edge project that aims to revolutionize the blood donation process. This project attempts to streamline blood donation by providing real-time donation requests, monitoring contribution histories, and an interactive map to help donors find nearby hospitals.'
     ],
-    href: "",
+    href: "https://github.com/DeepanshuSharma05/RESURRECTION",
     logo: "",
     image: "/assets/projects/game-engine.jpg",
     tags: [
@@ -98,7 +98,7 @@ export const myProjects = [
     subDescription: [
       'RESURRECTION is a cutting-edge project that aims to revolutionize the blood donation process. This project attempts to streamline blood donation by providing real-time donation requests, monitoring contribution histories, and an interactive map to help donors find nearby hospitals.'
     ],
-    href: "",
+    href: "https://divyanshu-sindhu.forgedinsyntax.club/",
     logo: "",
     image: "/assets/devansh_port.JPG",
     tags: [

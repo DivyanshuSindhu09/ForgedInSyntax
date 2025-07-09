@@ -61,10 +61,10 @@ const App = () => {
     <main>
       {/* <Loader /> */}
       {/* <First /> */}
-      {/* <About /> */}
+      <About />
       {/* <Features /> */}
       {/* <Members /> */}
-      <Projects />
+      {/* <Projects /> */}
     </main>
   );
 };

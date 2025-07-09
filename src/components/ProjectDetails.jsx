@@ -39,7 +39,7 @@ const ProjectDetails = ({
                 />
               ))}
             </div>
-            <a target="blank" href="https://github.com/DeepanshuSharma05/RESURRECTION"  className="inline-flex items-center gap-1 font-medium cursor-pointer hover-animation">
+            <a target="blank" href={href}  className="inline-flex items-center gap-1 font-medium cursor-pointer hover-animation">
               View Project{" "}
               <img src="assets/arrow-up.svg" className="size-4" href={href} />
             </a>

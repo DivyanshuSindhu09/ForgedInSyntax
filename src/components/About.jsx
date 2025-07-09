@@ -75,6 +75,7 @@ useEffect(()=>{
     <div id="light" className="w-full h-screen z-8 absolute bg-transparent">
     <Lightning xOffset={xOffset} />
     </div>
+    {/* <div className="absolute w-full z-8 h-screen light"></div> */}
     <div className=" bg-transparent min-w-[70%] lightning  text-white h-[50vh] absolute   z-99999">
         <h2 className="font-bold font-[acma-black] text-7xl">
             Forge Your Future. 

@@ -24,7 +24,7 @@ const Project = ({
           className=" w-[50%] object-cover image text-center"
           src={`${image}`} alt="" />
           <p className="text-2xl mt-4">{title}</p>
-          <div className="flex gap-5 tags mt-5 text-white">
+          <div className="flex gap-7 tags mt-5 text-white">
             {tags.map((tag) => (
               <span key={tag.id}>{tag.name}</span>
             ))}
@@ -32,8 +32,10 @@ const Project = ({
           onClick={() => setIsHidden(true)}
           className="flex items-center gap-1 ml-30 cursor-pointer hover-animation"
         >
+          <span className="bg-indigo flex px-1 py-2 rounded-xl">
           <span className="read">Read More</span>
           <img src="assets/arrow-right.svg" className="w-5" />
+          </span>
         </button>
           </div>
         </div>

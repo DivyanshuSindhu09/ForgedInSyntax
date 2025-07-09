@@ -309,7 +309,7 @@ const handleCardLeave = (index: number) => {
       ref={rootRef}
       onPointerMove={handleMove}
       onPointerLeave={handleLeave}
-      className={`relative w-full flex flex-wrap bg-white justify-center super-cards items-start gap-8 ${className}` }
+      className={`relative w-full flex flex-wrap justify-center py-10 bg-transparent items-start gap-8 ${className}` }
       style={
         {
           "--r": `${radius}px`,

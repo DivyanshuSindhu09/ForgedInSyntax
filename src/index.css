@@ -51,7 +51,16 @@ body {
   width: 100dvw;
   overflow-x: hidden;
   font-family: "Round", sans-serif;
-
+background: linear-gradient(
+    223.17deg,
+    rgb(28, 24, 41) 0%,
+    rgb(27, 24, 40) 8.61%,
+    rgb(25, 23, 36) 17.21%,
+    rgb(22, 21, 32) 25.82%,
+    rgb(20, 19, 28) 34.42%,
+    rgb(18, 18, 24) 43.03%,
+    rgb(17, 17, 23) 51.63%
+  );
 }
 
 main {
@@ -281,7 +290,7 @@ main {
   }
 }
 body {
-  background: #030412;
+  
   font-family: "Funnel Display", sans-serif;
   color: white;
   scroll-behavior: smooth;
@@ -395,4 +404,10 @@ body {
 .read{
   transform: translateX(130%);
 }
+}
+
+.light{
+  background-image: url(https://miro.medium.com/v2/resize:fit:1200/1*xMuIOwjliGUPjkzukeWKfw.jpeg);
+  background-position: center;
+  background-size: cover;
 }

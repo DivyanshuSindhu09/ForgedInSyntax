@@ -4,12 +4,38 @@ import Card from "../components/Card";
 // import CopyEmailButton from "../components/CopyEmailButton";
 import {Frameworks}  from "../components/FrameWorks";
 import Spline from "@splinetool/react-spline";
+import { useGSAP } from "@gsap/react";
+import { SplitText } from "gsap/all";
+import gsap from "gsap";
 
 const Features = () => {
+  useGSAP(()=>{
+      const split = new SplitText(".reasons", { type: "chars" });
+       const tl = gsap.timeline({scrollTrigger : {
+        trigger : '.reasons',
+        // start : 'top top'
+       } });
+  
+      tl.from(split.chars, {
+        y: 100,
+        rotationX: 90,
+        opacity: 0,
+        color: "#ffffff",
+        stagger: 0.03,
+        duration: 1,
+        transformOrigin: "center top",
+        perspective: 700,
+      })
+        .to(split.chars, {
+          duration: 1,
+          stagger: 0.04,
+          ease: "power2.inOut",
+        })
+    },[])
   const grid2Container = useRef();
   return (
     <section className="c-space section-spacing text-xl mb-20" id="about">
-      <h2 className=" text-7xl font-[acma-black] ">Reasons to Join Us!</h2>
+      <h2 className=" text-7xl font-[acma-black] reasons ">Reasons to Join Us!</h2>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[18rem] mt-12">
         {/* Grid 1 */}
         <div className="flex relative items-end grid-default-color grid-1">
