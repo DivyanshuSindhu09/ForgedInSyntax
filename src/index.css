@@ -369,3 +369,30 @@ body {
 .field-input-focus {
   @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/20;
 }
+
+
+
+
+@media (max-width : 600px) {
+  .disable{
+  display: none;
+}
+.image{
+  width: 100%;
+}
+.project-title{
+  font-size: 15vw;
+}
+
+.tags{
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  align-items: start;
+  width: 100%;
+}
+
+.read{
+  transform: translateX(130%);
+}
+}

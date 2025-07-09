@@ -3,20 +3,25 @@ import Card from "../components/Card";
 // import { Globe } from "../components/globe";
 // import CopyEmailButton from "../components/CopyEmailButton";
 import {Frameworks}  from "../components/FrameWorks";
+import Spline from "@splinetool/react-spline";
 
 const Features = () => {
   const grid2Container = useRef();
   return (
-    <section className="c-space section-spacing text-xl" id="about">
-      <h2 className="text-heading font-[acma-black] ">Reasons to Join Us!</h2>
+    <section className="c-space section-spacing text-xl mb-20" id="about">
+      <h2 className=" text-7xl font-[acma-black] ">Reasons to Join Us!</h2>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[18rem] mt-12">
         {/* Grid 1 */}
-        <div className="flex items-end grid-default-color grid-1">
+        <div className="flex relative items-end grid-default-color grid-1">
           <img
+
             src="https://toppng.com/uploads/preview/code-text-programming-letters-symbols-11569818411fpnugmoo1n.jpg"
-            className="absolute scale-[1.75] -right-[5rem] -top-[1rem] md:scale-[3] md:left-50 md:inset-y-10 lg:scale-[1.2] lg:left-0 lg:top-0"
+            className="absolute disable scale-[1.75] -right-[5rem] -top-[1rem] md:scale-[3] md:left-50 md:inset-y-10 lg:scale-[1.2] lg:left-0 lg:top-0"
           />
-          <div className="z-10">
+          
+  
+
+          <div className="bg-transparent z-10">
             <p className="headtext font-[acma-semi]">Real-World Projects</p>
             <p className="subtext font-[absans]">
               Work on innovative projects that solve actual problems and build your portfolio while learning.
@@ -76,16 +81,18 @@ const Features = () => {
           </div>
         </div>
         {/* Grid 3 */}
-        <div className="grid-black-color grid-3">
-          <div className="z-10 w-[50%]">
+        <div className=" grid-black-color relative grid-3">
+          
+          <div className="w-[60vh] h-[60vh] blur-2xl disable rounded-full right-[-15%] bottom-[-40%] bg-gray-500 absolute"></div>
+          <div className="z-10 w-[60%]">
             <p className="headtext font-[acma-semi]">Community Spirit</p>
             <p className="subtext font-[absans]">
               Join a friendly community of developers where everyone helps each other grow and succeed.
             </p>
           </div>
-          <figure className="absolute left-[30%] top-[10%]">
-            {/* <Globe /> */}
-          </figure>
+          
+            {/* <Spline className='absolute left-[40%] top-[10%]' scene="" /> */}
+          
         </div>
         {/* Grid 4 */}
         <div className="grid-special-color grid-4">

@@ -86,7 +86,7 @@ const ChromaGrid: React.FC<ChromaGridProps> = ({
       
       title: "Kartavya",
       subtitle: "Data Scientist",
-      // handle: "@caseypark",
+     
       borderColor: "#EF4444",
       gradient: "linear-gradient(195deg,#EF4444,#000)",
       
@@ -96,7 +96,7 @@ const ChromaGrid: React.FC<ChromaGridProps> = ({
       
       title: "Dhruv Gautam",
       subtitle: "Mobile Developer",
-      // handle: "@thesamkim",
+  
       borderColor: "#8B5CF6",
       gradient: "linear-gradient(225deg,#8B5CF6,#000)",
       
@@ -309,7 +309,7 @@ const handleCardLeave = (index: number) => {
       ref={rootRef}
       onPointerMove={handleMove}
       onPointerLeave={handleLeave}
-      className={`relative w-full flex flex-wrap bg-white justify-center super-cards items-start gap-3 ${className}` }
+      className={`relative w-full flex flex-wrap bg-white justify-center super-cards items-start gap-8 ${className}` }
       style={
         {
           "--r": `${radius}px`,

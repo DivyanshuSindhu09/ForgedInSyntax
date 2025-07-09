@@ -16,6 +16,7 @@ const Card = ({ style, text, image, containerRef }) => {
       style={style}
       whileHover={{ scale: 1.05 }}
       drag
+      ref={containerRef}
       dragConstraints={containerRef}
       dragElastic={1}
     >

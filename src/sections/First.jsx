@@ -29,8 +29,8 @@ const Hero = () => {
       .to('.fade-out', { opacity: 0, ease: 'power1.inOut' })
       .to('.scale-out', { scale: 1, ease: 'power1.inOut' })
       .to('.mask-wrapper', { 
-        maskPosition : "50% 80%",
-        maskSize : "20% 20%", ease: 'power1.inOut' }, '<')
+        maskPosition : "50% 50%",
+        maskSize : "40% 40%", ease: 'power1.inOut' }, '<')
       .to('.mask-wrapper', { opacity: 0 })
       // .to('.overlay-logo', { opacity: 1, duration :0.1, onComplete: () => {
       //   gsap.to('.overlay-logo', { opacity: 0, duration:0.1 });

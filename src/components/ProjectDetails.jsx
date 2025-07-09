@@ -9,9 +9,9 @@ const ProjectDetails = ({
   closeModal,
 }) => {
   return (
-    <div className="absolute top-[-10%] mt-10  inset-0 z-50 flex items-center justify-center w-full moverflow-hidden overflow-y-auto backdrop-blur-sm">
+    <div className="absolute font-[absans] bottom-0  mt-10  inset-0 z-50 flex items-center justify-center w-full moverflow-hidden overflow-y-auto backdrop-blur-sm">
       <motion.div
-        className="relative min-h-full max-w-2xl border shadow-sm rounded-2xl bg-gradient-to-l from-midnight to-navy border-white/10"
+        className="fixed bottom-0  max-w-2xl border shadow-sm rounded-2xl bg-gradient-to-l from-midnight to-navy border-white/10"
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
       >
@@ -21,9 +21,9 @@ const ProjectDetails = ({
         >
           <img src="assets/close.svg" className="w-6 h-6" />
         </button>
-        <img src={image} alt={title} className="w-full rounded-t-2xl" />
+        <img src={image} alt={title} className="w-full object-cover rounded-t-2xl" />
         <div className="p-5">
-          <h5 className="mb-2 text-2xl font-bold text-white">{title}</h5>
+          <h5 className="mb-2 text-2xl font-bold text-left text-white">{title}</h5>
           <p className="mb-3 font-normal text-neutral-400">{description}</p>
           {subDescription.map((subDesc, index) => (
             <p className="mb-3 font-normal text-neutral-400">{subDesc}</p>
