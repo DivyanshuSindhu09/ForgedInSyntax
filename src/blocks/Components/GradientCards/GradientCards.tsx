@@ -18,7 +18,7 @@ export interface ChromaItem {
   description? : string;
 }
 
-export interface ChromaGridProps {
+export interface GradientCardsProps {
   items?: ChromaItem[];
   className?: string;
   radius?: number;
@@ -29,7 +29,7 @@ export interface ChromaGridProps {
 
 type SetterFn = (v: number | string) => void;
 
-const ChromaGrid: React.FC<ChromaGridProps> = ({
+const GradientCards: React.FC<GradientCardsProps> = ({
   items,
   className = "",
   radius = 300,
@@ -52,10 +52,8 @@ const ChromaGrid: React.FC<ChromaGridProps> = ({
       title: "Raman Mann",
       subtitle: "Co - Founder",
       handle: "@zeroxv6",
-      
       borderColor: "#4F46E5",
       gradient: "linear-gradient(145deg,#4F46E5,#000)",
-      
       techStack : 'Kotlin | Python | MySql | CyberSec'
     },
     {
@@ -65,7 +63,6 @@ const ChromaGrid: React.FC<ChromaGridProps> = ({
       handle: "@DeepanshuSharma",
       borderColor: "#10B981",
       gradient: "linear-gradient(210deg,#10B981,#000)",
-      
       description : 'A full-stack web developer specializing in the MERN stack — MongoDB, Express.js, React.js, and Node.js. ',
       techStack : 'MERN | Python | MySql '
     },
@@ -83,13 +80,10 @@ const ChromaGrid: React.FC<ChromaGridProps> = ({
       techStack : 'React | ThreeJS | GSAP'
     },
     {
-      
       title: "Kartavya",
       subtitle: "Data Scientist",
-     
       borderColor: "#EF4444",
       gradient: "linear-gradient(195deg,#EF4444,#000)",
-      
       techStack : 'Python | AI/ML | Video Editing'
     },
     {
@@ -106,7 +100,7 @@ const ChromaGrid: React.FC<ChromaGridProps> = ({
       
       title: "Manya Sharma",
       subtitle: "Cloud Architect",
-      // handle: "@tylerrod",
+     
       borderColor: "#06B6D4",
       gradient: "linear-gradient(135deg,#06B6D4,#000)",
       
@@ -116,7 +110,7 @@ const ChromaGrid: React.FC<ChromaGridProps> = ({
       
       title: "Chirag",
       subtitle: "Web Developer",
-      // handle: "@alexrivera",
+     
       
       borderColor: "#4F46E5",
       gradient: "linear-gradient(145deg,#4F46E5,#000)",
@@ -141,7 +135,7 @@ const ChromaGrid: React.FC<ChromaGridProps> = ({
       
       title: "Toshit Tandon",
       subtitle: "Backend Developer",
-      // handle: "@caseypark",
+
       borderColor: "#EF4444",
       gradient: "linear-gradient(195deg,#EF4444,#000)",
       
@@ -151,7 +145,7 @@ const ChromaGrid: React.FC<ChromaGridProps> = ({
       
       title: "Rubayat Tahsin",
       subtitle: "Backend Developer",
-      // handle: "@thesamkim",
+    
       borderColor: "#8B5CF6",
       gradient: "linear-gradient(225deg,#8B5CF6,#000)",
       
@@ -161,7 +155,7 @@ const ChromaGrid: React.FC<ChromaGridProps> = ({
       
       title: "Nabin Tharu",
       subtitle: "Cyber Security",
-      // handle: "@tylerrod",
+
       borderColor: "#06B6D4",
       gradient: "linear-gradient(135deg,#06B6D4,#000)",
       
@@ -171,7 +165,7 @@ const ChromaGrid: React.FC<ChromaGridProps> = ({
       
       title: "Anshika Verma",
       subtitle: "App Developer",
-      // handle: "@alexrivera",
+ 
       
       borderColor: "#4F46E5",
       gradient: "linear-gradient(145deg,#4F46E5,#000)",
@@ -424,4 +418,4 @@ const handleCardLeave = (index: number) => {
   );
 };
 
-export default ChromaGrid;
+export default GradientCards;

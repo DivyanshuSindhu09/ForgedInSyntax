@@ -1,6 +1,5 @@
-import React from 'react'
-import ChromaGrid from '../blocks/Components/ChromaGrid/ChromaGrid'
 import TrueFocus from '../blocks/TextAnimations/TrueFocus/TrueFocus'
+import GradientCards from '../blocks/Components/GradientCards/GradientCards'
 
 const Members = () => {
   return (
@@ -9,7 +8,7 @@ const Members = () => {
         <TrueFocus/>
       </div>
         <div className='w-full mt-20 mb-20 overflow-hidden overflow-y-auto min-h-screen'>
-        <ChromaGrid/>
+        <GradientCards/>
         </div>
     </section>
   )

@@ -10,6 +10,7 @@ import Features from './components/Features';
 import Members from './components/Members';
 
 import Lenis from '@studio-freight/lenis';
+import Footer from './components/Footer';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -59,12 +60,13 @@ const App = () => {
 
   return (
     <main>
-      {/* <Loader /> */}
-      {/* <First /> */}
-      <About />
-      {/* <Features /> */}
-      {/* <Members /> */}
-      {/* <Projects /> */}
+      <Loader />
+      <First />
+      {/* <About /> */}
+      <Features />
+      <Members />
+      <Projects />
+      <Footer/>
     </main>
   );
 };

@@ -7,8 +7,8 @@ const Hero = () => {
 
   useGSAP(() => {
     gsap.set('.mask-wrapper', {
-      maskPosition: "50% 45%",
-      maskSize: "8100% 8100%",
+      maskPosition: "42% 45%",
+      maskSize: "8000% 10000%",
     });
 
     gsap.set('.mask-logo', { marginTop: '-100vh', opacity: 0 });
@@ -40,10 +40,13 @@ const Hero = () => {
 
   return (
     <section className="hero-section">
-      <div className="size-full mask-wrapper">
-        <img src="/new_img.jpeg" alt="background" className="scale-out w-full" />
+      {/* <div className="w-full h-full mask-wrapper">
+        <img src="https://images.unsplash.com/photo-1655739330253-f7803decc705?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNvbXB1dGVyJTIwbGFuZHNjYXBlfGVufDB8fDB8fHww" alt="background" className="scale-out object-cover h-full w-full" />
         
         
+      </div> */}
+      <div className="w-full h-screen  first-mask  mask-wrapper">
+
       </div>
 
       
