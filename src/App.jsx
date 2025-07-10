@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
-
+import { Toaster } from "react-hot-toast";
 import First from './sections/First';
 import Projects from './sections/Projects';
 import About from './components/About';
@@ -60,6 +60,7 @@ const App = () => {
 
   return (
     <main>
+       <Toaster position="top-right" />
       <Loader />
       <First />
       {/* <About /> */}

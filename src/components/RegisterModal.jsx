@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "motion/react";
-
+import { databases } from "../lib/appwriteConfig"; 
+import toast from "react-hot-toast";
 const RegisterModal = ({ close }) => {
   const [formData, setFormData] = useState({
     fullName: "",
@@ -14,11 +15,42 @@ const RegisterModal = ({ close }) => {
     instagram: "",
   });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form Data:", formData);
-    close();
+  const DATABASE_ID = "67d536ac003c051aa770";
+  const COLLECTION_ID = "67d536e00038c2bc5952";
+
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  const applicationData = {
+    full_name: formData.fullName,
+    email: formData.email,
+    course: formData.program,
+    university: formData.university,
+    year: formData.year,
+    skills: formData.skills,
+    linkedin: formData.linkedin,
+    twitter: formData.xProfile || null,
+    instagram: formData.instagram || null,
+    created_at: new Date().toISOString()
   };
+
+  const loadingToast = toast.loading("Submitting application...");
+
+  try {
+    await databases.createDocument(
+      DATABASE_ID,
+      COLLECTION_ID,
+      "unique()",
+      applicationData
+    );
+
+    toast.success("Application submitted!", { id: loadingToast });
+    close(); // close modal
+  } catch (error) {
+    toast.error("Submission failed: " + error.message, { id: loadingToast });
+    console.error("Appwrite error:", error);
+  }
+};
 
   return (
     <div className="fixed inset-0 z-50 flex justify-center items-start overflow-y-auto backdrop-blur-sm bg-[#000000a4] pt-10 font-[absans]">
