@@ -60,7 +60,7 @@ const App = () => {
 
   return (
     <main>
-       <Toaster position="top-right" />
+      <Toaster position="top-right" />
       <Loader />
       <First />
       <About />

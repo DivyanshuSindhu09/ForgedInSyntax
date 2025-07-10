@@ -109,8 +109,10 @@ const Lightning = ({
       }
 
       void main() {
-          mainImage(gl_FragColor, gl_FragCoord.xy);
-      }
+    vec4 color;
+    mainImage(color, gl_FragCoord.xy);
+    gl_FragColor = color;
+}
     `;
 
     const compileShader = (source, type) => {
